@@ -1,0 +1,5 @@
+FROM pwn.red/jail
+COPY --from=ubuntu / /srv
+RUN mkdir /srv/app
+COPY run.sh /srv/app/run
+ENV JAIL_TIME=120

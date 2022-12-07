@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Medical Mechanica - Home
+{% endblock %}
+
+{% block content %}
+<div class="introductory">
+            <img class='factory-img' src={{ url_for('static',filename='factory.webp' ) }}>
+
+            <div id="info">
+                <p><span class="bold color2">Medical Mechanica</span> is a mysterious corporation that operates in large
+                    factories on various planets, the
+                    factories themselves looking like giant clothing irons. Exactly who works there and who runs it are
+                    a
+                    mystery, as all of the factories are heavily guarded by the planet's inhabitants, exemplified by
+                    mall
+                    cops
+                    in the case of the one in Mabase. The factories have no entrances or exits, only holes along the top
+                    where
+                    steam pours out at different times of the day. </p>
+            </div>
+
+        </div>
+        <div class="v-spacer-md"></div>
+        <div class="content">
+            <h1>In <span class="bold color2">Medical Mechanica </span>, we build mechas <span
+                    style="font-style:normal">😈 😈 </span></h1>
+            <h2>Login to see all the goods we are building, and only what you are allowed to see 😇😇</h2>
+            <div class="v-spacer-md"></div>
+            <a class='btn' href={{url_for('login')}}>Login</a>
+        </div>
+{% endblock %}

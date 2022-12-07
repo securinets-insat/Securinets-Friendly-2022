@@ -1,0 +1,21 @@
+Compiling 2 files with 0.8.16
+Solc 0.8.16 finished in 1.16s
+Compiler run successful
+Deployer: 0x84e7a3679A82C2766Ff8382862ab883FF9460307
+Deployed to: 0x0dCaE104A7bDC060a097D070E0b54B8F9B6B7246
+Transaction hash: 0x4b2d60ec6520b18703d75f83cb691117bcef730b949477f7ddd3451fd58ab146
+Starting contract verification...
+Waiting for etherscan to detect contract deployment...
+
+Submitting verification for [src/CrazyGambler.sol:CrazyGambler] "0x0dCaE104A7bDC060a097D070E0b54B8F9B6B7246".
+
+Submitting verification for [src/CrazyGambler.sol:CrazyGambler] "0x0dCaE104A7bDC060a097D070E0b54B8F9B6B7246".
+
+Submitting verification for [src/CrazyGambler.sol:CrazyGambler] "0x0dCaE104A7bDC060a097D070E0b54B8F9B6B7246".
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `s3dfd2ipfauwcd6fdhpyzmwtn7bidfxvsbturiahr2gxi9kl84`
+	URL:
+        https://rinkeby.etherscan.io/address/0x0dcae104a7bdc060a097d070e0b54b8f9b6b7246
+Waiting for verification result...
+Contract source code already verified

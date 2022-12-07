@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %} Medical Mechanica {% endblock %}</title>
+</head>
+
+<body>
+    <navbar>
+        <div class="navbar-inside">
+            <img src={{ url_for('static', filename='medical-mechanica-logo.png' ) }} alt="logo">
+            <div class="h-spacer-sm"></div>
+            <h1>Medical Mechanica Admin</h1>
+        </div>
+        {% if 'username' in session %}
+        <a class="btn logout" href={{url_for("logout")}}>
+            Logout
+        </a>
+        {% endif %}
+    </navbar>
+    <div class="v-section-spacer-md"></div>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+</body>
+
+</html>

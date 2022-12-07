@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --main-color: #FBE7B5;
+    --secondary-color: #FFC500;
+    --special-color: #d08b1c;
+}
+
+.color2 {
+    color: var(--special-color)
+}
+
+.bold {
+    font-weight: bold;
+
+}
+
+body {
+    background-color: var(--main-color);
+    padding: 1rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+a:visited {
+    color: inherit;
+}
+
+navbar {
+    margin: 0px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    color: var(--secondary-color)
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 2rem;
+    background-color: var(--secondary-color);
+    width: 200px;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+h2 {
+    margin: 5px auto;
+    width: fit-content;
+    font-size: 1rem;
+    opacity: 0.8
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.factory-img {
+    margin-right: 2rem;
+    max-width: 550px;
+    margin: 1rem auto;
+}
+
+.introductory {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#info {
+    padding-top: 1rem;
+    font-size: 1.25rem;
+    max-width: 550px;
+}
+
+.content>h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1px auto;
+    width: fit-content;
+    font-style: italic;
+}
+
+navbar img {
+    max-width: 80px;
+}
+
+.v-spacer-md {
+    height: 2rem;
+
+}
+
+.h-spacer-sm {
+    width: 1rem;
+
+}
+
+.v-section-spacer-md {
+    height: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+form>div {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    font-size: 1.25rem;
+    height: 40px;
+    padding: 0.5rem;
+}
+
+label {
+    margin-bottom: 0.75rem;
+}
+
+button {
+    cursor: pointer
+}
+
+.logout {
+    background-color: rgb(250, 122, 122);
+    color: black !important;
+}
+
+.navbar-inside {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.mecha-card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin: 1rem;
+}
+
+.mecha-card .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mecha-card:hover {
+    opacity: 0.8
+}
+
+.mecha-info {
+    padding: 1rem;
+}
+
+.mecha-card img {
+    min-width: 400px;
+    max-height: 300px;
+
+}
+
+.mecha-card h1 {
+    color: var(--special-color)
+        /* margin-bottom: -100%;
+    max-width: 100%;
+    color: white */
+}
+
+.mecha-card p {
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.mecha-card h3 {
+    color: rgb(183, 141, 42);
+}
+
+.card-vertical {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.mecha-img {
+    width: 100%;
+    height:auto;
+    max-height: 600px !important;
+}
+
+
+.card-vertical p,
+.card-vertical h1 {
+    width: 100%;
+}
+
+.card-vertical .mecha-info {
+    width: 100%;
+}

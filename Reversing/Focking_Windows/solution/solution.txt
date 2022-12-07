@@ -1,0 +1,6 @@
+1. Open the binary in any disassembler/decompiler
+2. starting from the entry of the program which is in the `start` function, follow the call to the function at address `0x4011A0`, knowing that in x86 assembly the return value is saved in the eax register so we go to the bottom of that subroutine and search for instructions modifying eax or referring to it. We observe:
+```asm
+mov ebx, eax
+call _cexit```
+A call to exit with the status code that the program will return. Before these 2 instructions we see `call 0x40875A` so this function is the last one affecting eax and so it should be our `main`.

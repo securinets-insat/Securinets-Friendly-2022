@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin
+
+User-agent: *
+Allow: /
+
+Securinets{Web_Crawlers_can't_reach_me}

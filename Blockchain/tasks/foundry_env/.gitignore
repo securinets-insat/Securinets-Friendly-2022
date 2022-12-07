@@ -1,0 +1,23 @@
+# Compiler files
+cache/
+out/
+.vscode
+.env
+
+
+# Ignores development broadcast logs
+!/broadcast
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+
+
+# Dotenv file
+.env
+lib
+node_modules
+.vercel
+.next
+.netlify
+deployments
+fronts
+

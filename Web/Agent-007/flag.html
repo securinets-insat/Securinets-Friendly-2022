@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The British Secret Intelligence Service</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      nav {
+        margin-top: 3rem;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav > h1 {
+        width: fit-content;
+      }
+
+      nav img {
+        max-width: 700px;
+      }
+
+      #main {
+        color: red;
+        padding-top: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="container">
+      <h1>The British Secret Intelligence Service</h1>
+      <img
+        src="https://ichef.bbci.co.uk/news/976/cpsprodpb/41D5/production/_113735861_hi030994286-1.jpg.webp"
+      />
+    </nav>
+    <div id="main">
+      <p>Welcome agent James Bond</p>
+      <section class="container">
+        <img
+          src="https://media.vanityfair.com/photos/632b3dca9abfd8a85cba44bc/9:16/w_746,h_1327,c_limit/james-bond-no-time-to-die-daniel-craig.jpg"
+          alt=""
+        />
+        <button onclick="showFlag"> Reveal flag </button>
+        <h3 style="display:hidden" id="flag" >securinets{h34d3r5-h0ld5-v4lu4bl3-1nf05}</h3>
+      </div>
+      <!-- Developer 0x01: James Bond if you see this I am a big fan of you the company don't allow normal workers like me to contact you. you rock ! -->
+    </div>
+    <script>
+    function showFlag(){
+            const flag= document.getElementById("flag");
+            flag.style.display="block";
+
+    }
+    </script>
+  </body>
+</html>

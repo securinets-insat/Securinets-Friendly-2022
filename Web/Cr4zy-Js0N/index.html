@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Abyss Manifesto</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+
+    <style>
+      #one {
+        transition: all ease-in-out 500ms;
+      }
+
+      #two {
+        transition: all ease-in-out 500ms;
+        opacity: 0;
+      }
+
+      #third {
+        transition: all ease-in-out 500ms;
+        opacity: 0;
+      }
+
+      ul span {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      nav {
+        margin-top: 3rem;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav > h1 {
+        width: fit-content;
+      }
+
+      nav img {
+        max-width: 700px;
+      }
+
+      #main {
+        color: red;
+        padding-top: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="container">
+      <div id="one">
+        <h1>Welcome to the entrance for the Abyss</h1>
+        <img src="bg.jpg" />
+      </div>
+      <div id="two">
+        <h1>For the gates to open you shall find the answers.</h1>
+      </div>
+    </nav>
+    <main style="display: flex; flex-direction: column; align-items: center">
+      <div id="third">
+        <h2>Answer the questions to enter the gate</h2>
+        <ul>
+          <li>
+            <span>Gate One</span>
+            <p>What being has four legs, then two, and then three?</p>
+          </li>
+          <li>
+            <span>Gate Two</span>
+            <p>is Merlin the wizard real ? (True/False)</p>
+          </li>
+          <li>
+            <span>Gate Three</span>
+            <p>The paladins of Charlmagne had how many members ?</p>
+          </li>
+        </ul>
+
+        <p>
+          Answer the 3 following questions in a JSON format like
+          <code>{ "answers":[{ "QUESTION_NAME":"QUESTION_ANSWER" } ] } </code>
+        </p>
+      </div>
+    </main>
+
+    <script>
+      window.onload = () => {
+        const firstdiv = document.querySelector("#one");
+        const secondiv = document.querySelector("#two");
+        const thirddiv = document.querySelector("#third");
+        setTimeout(() => {
+          firstdiv.style.opacity = 0;
+          firstdiv.style.height = 0;
+          secondiv.style.opacity = 1;
+          thirddiv.style.opacity = 1;
+        }, 3000);
+      };
+    </script>
+  </body>
+</html>

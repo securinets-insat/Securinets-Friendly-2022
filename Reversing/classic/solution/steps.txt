@@ -1,0 +1,19 @@
+1. compile the program with nasm `nasm -f elf64 source.asm` and link with `ld -m elf_x86_64 -s -o chall source.o` (you might get a more simplified version of this assembly in C if you pass the program to a decompiler like IDA or Ghidra)
+2. do some static analysis and dynamic analysis with gdb for better understanding if things get a little too complicated
+3. layer1 -> it's just comparing with the value `Securinets{` (the value is reversed because x86_64 is a little endian processor)
+4. layer2 -> Here the program is xoring the next 8 bytes after `Securinets{` with the value in r15 then comparing the result to the value in r9, so do get that part of the flag xor r15 with the value in r9 (0x3384bd2e2d365625 ^ 0x5fcb8d4d7261664d) == 0x6c4f30635f573068, convert to bytes from hex in python `b"".fromhex("6c4f30635f573068")` or you could also convert to bytes from an int from little endian which in python would translate to `(0x6c4f30635f573068).to_bytes(8, "little")`
+5. layer3 -> Here the program is saving the 8 bytes starting from index 0x13 reversed into the stack (some what in big endian :p) after multiplying each of them with 7 (since we are saving a single byte if the value overflows that means if it gets over 0xff then the result which will be saved is (byet * 7) % (2 ** 8)),then it's xoring the bytes with the value in r15 and comparing the result to the value in r9 register (same steps as layer2). First you would xor the value in r15 with the value in r9 then convert to bytes from big endian, after that you could run a bruteforce of each byte by testing all bytes muliplying by 7 mod (2 ** 8) and if it matches the byte in the same position from our decoded value from the xor then you add that byte to the flag (solution is written as a python script in exploit.py file)
+6. layer4 -> saving 5 bytes (which are the remaining bytes of the flag) from the input to the stack, then it's doing this logic translated to C:
+```c
+char flag[0x5] = 'XXXX}';
+
+if ((flag[0x4] - 0x3e) == flag[0x3]) {
+	if ((flag[0x3] + 0x39) == flag[0x0]) {
+		if ((flag[0x0] - 0x42) == flag[0x1]) {
+			if ((flag[0x1] - 0x2) == flag[0x2]) {
+				puts("Correct!");
+			}
+		}
+	}
+}```
+We already know that the flag will end with `}` so we just take that character and do the math of each if statement to get the last part of the flag.

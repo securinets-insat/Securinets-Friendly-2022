@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}
+Medical Mechanica - Mechas
+{% endblock %}
+
+{% block content %}
+<h1>Mechas</h1>
+
+<div class="cards">
+    {% for mecha in mechas %}
+    <a href="{{url_for('find_mecha',mechaId=mecha.id)}}" class="mecha-card">
+        <div class="main">
+            <img src="{{url_for('static',filename=mecha.image)}}" alt="{{mecha.name}}">
+        </div>
+
+        <div class="mecha-info">
+            <h1>{{mecha.name}}</h1>
+            <div class="v-spacing-md"></div>
+            <h3>
+                Click for More Infos
+            </h3>
+
+        </div>
+
+    </a>
+    {% endfor %}
+</div>
+<h1 style="padding:1rem;font-size: 1rem;">That's all you can see. S0rry but we are h1ding things for your s4nity</h1>
+
+{% endblock %}
