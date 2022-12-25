@@ -10,8 +10,8 @@ This Repository Contains The Challenges of Securinets Friendly CTF 2022
 |       [OSINT](OSINT/)       |       13        |
 |      [Crypto](Crypto/)      |       17        |
 |         [Web](Web/)         |        17       |
-|   [Reversing](Reversing/)   |        5        |
-|   [Forensics](Forensics/)   |        5        |
-|        [Misc](Misc/)        |        5        |
+|   [Reversing](Reversing/)   |        12        |
+|   [Forensics](Forensics/)   |        7        |
+|        [Misc](Misc/)        |        9        |
 |  [Blockchain](Blockchain/)  |        7        |
 | [Programming](Programming/) |        3        |
